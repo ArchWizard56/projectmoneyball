@@ -55,4 +55,3 @@ def transfer(fromAccount,toAccount,password,resource,amount):
             return 1, "Access Denied"
     except KeyError:
         return 1, "Wrong Account Number"
-print(transfer("257935", "635248", "helloWorld", "gold", -10))
