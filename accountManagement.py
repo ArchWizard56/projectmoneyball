@@ -36,6 +36,7 @@ def checkBalance(accountNumber, password):
 
 def transfer(fromAccount,toAccount,password,resource,amount):
     #Check that the account numbers are right and that the password is correct
+    amount = abs(amount)
     try:
         if accounts[fromAccount]["password"] == password:
                 returnString = "Transferred "
@@ -54,4 +55,4 @@ def transfer(fromAccount,toAccount,password,resource,amount):
             return 1, "Access Denied"
     except KeyError:
         return 1, "Wrong Account Number"
-print(transfer("257935", "635248", "helloWorld", "gold", 10))
+print(transfer("257935", "635248", "helloWorld", "gold", -10))
